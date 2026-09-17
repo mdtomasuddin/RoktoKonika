@@ -1,24 +1,20 @@
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { AuthProvider } from './contexts/AuthContext';
+import { NotificationProvider } from './contexts/NotificationContext';
+import { ToastProvider } from './contexts/ToastContext';
+import { AppRoutes } from './routes/AppRoutes';
 
-
-const App = () => {
-
-  //onClick event handler
-  const onChange = () => {
-    alert('Hello World')
-  }
-
-  //sum
-  const sum = (a, b) => {
-    return a + b
-  }
-
+export default function App() {
   return (
-    <div>
-      <h1>My First React App</h1>
-      <button onClick={() => alert('Sum is: ' + sum(5, 10))}>Sum</button>
-      <button onClick={onChange}>Click </button>
-    </div>
+    <BrowserRouter>
+      <AuthProvider>
+        <NotificationProvider>
+          <ToastProvider>
+            <AppRoutes />
+          </ToastProvider>
+        </NotificationProvider>
+      </AuthProvider>
+    </BrowserRouter>
   );
-};
-
-export default App;
+}
