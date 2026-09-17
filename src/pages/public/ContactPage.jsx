@@ -3,11 +3,8 @@ import {
   PhoneCall, 
   Mail, 
   MapPin, 
-  ShieldAlert, 
   MessageSquare, 
-  CheckCircle2, 
-  Send,
-  HeartHandshake
+  Send
 } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 import { Input, Textarea } from '../../components/ui/Input';

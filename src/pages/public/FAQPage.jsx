@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle, ShieldAlert, Heart, CheckCircle2 } from 'lucide-react';
+import { ChevronDown, HelpCircle } from 'lucide-react';
 
 export function FAQPage() {
   const [openIdx, setOpenIdx] = useState(0);

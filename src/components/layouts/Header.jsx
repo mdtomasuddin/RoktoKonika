@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { 
-  Droplet, 
-  Menu, 
-  X, 
-  Bell, 
-  User, 
-  HeartHandshake, 
-  PlusCircle, 
-  ShieldCheck, 
+import {
+  Droplet,
+  Menu,
+  X,
+  Bell,
+  User,
+  HeartHandshake,
+  PlusCircle,
+  ShieldCheck,
   LogOut,
   Hospital,
   Building2,
@@ -21,14 +21,7 @@ import {
   HelpCircle,
   FileText,
   Info,
-  ShieldAlert,
-  Calendar,
-  Settings,
-  Sparkles,
-  Layers,
-  Compass,
-  CheckCircle2,
-  Lock
+  ShieldAlert
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useNotifications } from '../../contexts/NotificationContext';
@@ -168,7 +161,7 @@ export function Header() {
         <div className="bg-white/95 backdrop-blur-xl border-b border-slate-200/90 shadow-xs">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16 sm:h-18 gap-3 sm:gap-6">
-              
+
               {/* Brand Logo */}
               <Link to="/" className="flex items-center gap-2.5 group flex-shrink-0">
                 <div className="relative">
@@ -178,12 +171,11 @@ export function Header() {
                   <span className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-500 rounded-full border-2 border-white shadow-xs" />
                 </div>
                 <div className="flex flex-col">
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center">
                     <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 leading-none">
                       রক্ত<span className="text-rose-600">কণিকা</span>
                     </span>
-                    <span className="text-[10px] uppercase font-extrabold tracking-wider bg-rose-100 text-rose-700 px-1.5 py-0.2 rounded-md ml-1 hidden sm:inline-block">
-                      BD
+                    <span className="text-sm sm:text-base font-bold text-slate-500 tracking-tight ml-1">
                     </span>
                   </div>
                   <span className="text-[10px] font-semibold text-slate-400 tracking-wide mt-0.5">
@@ -197,11 +189,10 @@ export function Header() {
                 {/* 1. Home */}
                 <Link
                   to="/"
-                  className={`px-3.5 py-2 rounded-xl transition-all duration-150 ${
-                    location.pathname === '/'
+                  className={`px-3.5 py-2 rounded-xl transition-all duration-150 ${location.pathname === '/'
                       ? 'text-rose-600 bg-rose-50/80 font-bold shadow-xs'
                       : 'hover:text-rose-600 hover:bg-slate-50'
-                  }`}
+                    }`}
                 >
                   হোম
                 </Link>
@@ -209,11 +200,10 @@ export function Header() {
                 {/* 2. Find Blood */}
                 <Link
                   to="/find-blood"
-                  className={`px-3.5 py-2 rounded-xl transition-all duration-150 ${
-                    isActive('/find-blood')
+                  className={`px-3.5 py-2 rounded-xl transition-all duration-150 ${isActive('/find-blood')
                       ? 'text-rose-600 bg-rose-50/80 font-bold shadow-xs'
                       : 'hover:text-rose-600 hover:bg-slate-50'
-                  }`}
+                    }`}
                 >
                   রক্ত খুঁজুন
                 </Link>
@@ -221,11 +211,10 @@ export function Header() {
                 {/* 3. Urgent Blood Requests */}
                 <Link
                   to="/blood-requests"
-                  className={`px-3.5 py-2 rounded-xl transition-all duration-150 flex items-center gap-1.5 ${
-                    isActive('/blood-requests')
+                  className={`px-3.5 py-2 rounded-xl transition-all duration-150 flex items-center gap-1.5 ${isActive('/blood-requests')
                       ? 'text-red-700 bg-red-50 font-bold shadow-xs'
                       : 'hover:text-red-600 hover:bg-rose-50/50'
-                  }`}
+                    }`}
                 >
                   <span className="w-2 h-2 rounded-full bg-red-600 animate-pulse" />
                   <span>জরুরি অনুরোধ</span>
@@ -241,11 +230,10 @@ export function Header() {
                       setUserDropdownOpen(false);
                       setNotifDropdownOpen(false);
                     }}
-                    className={`px-3.5 py-2 rounded-xl transition-all duration-150 flex items-center gap-1 cursor-pointer ${
-                      isServicesActive() || servicesDropdownOpen
+                    className={`px-3.5 py-2 rounded-xl transition-all duration-150 flex items-center gap-1 cursor-pointer ${isServicesActive() || servicesDropdownOpen
                         ? 'text-rose-600 bg-rose-50/80 font-bold'
                         : 'hover:text-rose-600 hover:bg-slate-50'
-                    }`}
+                      }`}
                     aria-expanded={servicesDropdownOpen}
                   >
                     <span>সেবাসমূহ</span>
@@ -327,11 +315,10 @@ export function Header() {
                       setUserDropdownOpen(false);
                       setNotifDropdownOpen(false);
                     }}
-                    className={`px-3.5 py-2 rounded-xl transition-all duration-150 flex items-center gap-1 cursor-pointer ${
-                      isPagesActive() || pagesDropdownOpen
+                    className={`px-3.5 py-2 rounded-xl transition-all duration-150 flex items-center gap-1 cursor-pointer ${isPagesActive() || pagesDropdownOpen
                         ? 'text-rose-600 bg-rose-50/80 font-bold'
                         : 'hover:text-rose-600 hover:bg-slate-50'
-                    }`}
+                      }`}
                     aria-expanded={pagesDropdownOpen}
                   >
                     <span>পেজসমূহ</span>
@@ -444,16 +431,16 @@ export function Header() {
                           )}
                         </div>
                         <div className="flex items-center gap-3 text-[11px]">
-                          <button 
+                          <button
                             type="button"
-                            onClick={markAllAsRead} 
+                            onClick={markAllAsRead}
                             className="text-slate-500 hover:text-slate-900 font-semibold cursor-pointer"
                           >
                             পড়া হয়েছে
                           </button>
-                          <Link 
-                            to="/dashboard/notifications" 
-                            onClick={() => setNotifDropdownOpen(false)} 
+                          <Link
+                            to="/dashboard/notifications"
+                            onClick={() => setNotifDropdownOpen(false)}
                             className="text-rose-600 font-bold hover:underline"
                           >
                             সব দেখুন
@@ -471,11 +458,10 @@ export function Header() {
                                 setNotifDropdownOpen(false);
                                 if (n.link) navigate(n.link);
                               }}
-                              className={`p-3 rounded-2xl cursor-pointer text-xs transition-all border ${
-                                n.isRead 
-                                  ? 'bg-white border-transparent hover:bg-slate-50 text-slate-600' 
+                              className={`p-3 rounded-2xl cursor-pointer text-xs transition-all border ${n.isRead
+                                  ? 'bg-white border-transparent hover:bg-slate-50 text-slate-600'
                                   : 'bg-rose-50/60 border-rose-100 hover:bg-rose-50 text-slate-900 font-medium'
-                              }`}
+                                }`}
                             >
                               <div className="flex items-center justify-between mb-1">
                                 <span className="font-bold text-slate-900 flex items-center gap-1.5">
@@ -536,7 +522,7 @@ export function Header() {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      
+
                       {/* Circular Blood Group Badge Overlay */}
                       {user?.bloodGroup && (
                         <span className="absolute -bottom-1 -right-1 px-1.5 py-0.2 rounded-full bg-rose-600 text-white text-[9px] font-black border-2 border-white shadow-xs">

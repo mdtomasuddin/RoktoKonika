@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Lock, FileText } from 'lucide-react';
+import { Lock, FileText } from 'lucide-react';
 
 export function PrivacyPolicyPage() {
   return (

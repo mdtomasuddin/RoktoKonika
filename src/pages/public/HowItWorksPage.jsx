@@ -1,16 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { 
   PlusCircle, 
   Search, 
   PhoneCall, 
   HeartHandshake, 
-  CheckCircle2, 
   ShieldCheck, 
-  HelpCircle,
-  FileCheck
+  HelpCircle
 } from 'lucide-react';
-import { Button } from '../../components/ui/Button';
 
 export function HowItWorksPage() {
   const steps = [

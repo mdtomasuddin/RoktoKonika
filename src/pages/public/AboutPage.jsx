@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Droplet, HeartHandshake, ShieldCheck, Users, Target, Award, Heart, PlusCircle } from 'lucide-react';
+import { Droplet, ShieldCheck, Users, Target, Award, Heart } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 
 export function AboutPage() {

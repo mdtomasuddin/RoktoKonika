@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Droplet, Lock, Mail, User, Phone, MapPin, HeartHandshake } from 'lucide-react';
+import { Droplet, Lock, Mail, User, Phone } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { Button } from '../../components/ui/Button';
-import { Input, Select } from '../../components/ui/Input';
+import { Input } from '../../components/ui/Input';
 import { BloodGroupSelector } from '../../components/common/BloodGroupSelector';
 import { LocationSelector } from '../../components/common/LocationSelector';
 import { useToast } from '../../contexts/ToastContext';
@@ -53,7 +53,7 @@ export function RegisterPage() {
               <Droplet className="w-6 h-6 fill-white" />
             </div>
             <span className="text-2xl font-black text-slate-900">
-              রক্ত<span className="text-rose-600">কণিকা</span>
+              রক্ত<span className="text-rose-600">কণিকা</span><span className="text-slate-500 text-lg font-bold ml-1">-RoktoKonika</span>
             </span>
           </Link>
           <h2 className="text-xl font-bold text-slate-900 mt-2">নতুন অ্যাকাউন্ট তৈরি করুন</h2>
