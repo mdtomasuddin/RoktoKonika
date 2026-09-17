@@ -3,7 +3,6 @@ import { Outlet } from 'react-router-dom';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { MobileBottomNav } from './Footer';
-import { DemoRoleSwitcher } from '../common/InteractiveMapMock';
 
 export function PublicLayout() {
   return (
@@ -14,7 +13,6 @@ export function PublicLayout() {
       </main>
       <Footer />
       <MobileBottomNav />
-      <DemoRoleSwitcher />
     </div>
   );
 }

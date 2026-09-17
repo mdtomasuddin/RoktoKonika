@@ -17,7 +17,6 @@ import {
   Database
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
-import { DemoRoleSwitcher } from '../common/InteractiveMapMock';
 
 export function AdminLayout() {
   const { user, logout } = useAuth();
@@ -117,8 +116,6 @@ export function AdminLayout() {
       <main className="flex-1 min-w-0 p-4 sm:p-6 lg:p-8 overflow-y-auto">
         <Outlet />
       </main>
-
-      <DemoRoleSwitcher />
     </div>
   );
 }

@@ -17,7 +17,6 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { Header } from './Header';
-import { DemoRoleSwitcher } from '../common/InteractiveMapMock';
 import { BloodGroupBadge } from '../common/BloodGroupBadge';
 
 export function DashboardLayout() {
@@ -132,8 +131,6 @@ export function DashboardLayout() {
           <Outlet />
         </main>
       </div>
-
-      <DemoRoleSwitcher />
     </div>
   );
 }
