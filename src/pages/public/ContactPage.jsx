@@ -8,8 +8,14 @@ import {
 } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 import { Input, Textarea } from '../../components/ui/Input';
-import { EMERGENCY_HOTLINES } from '../../constants';
 import { useToast } from '../../contexts/ToastContext';
+
+const EMERGENCY_HOTLINES = [
+  { name: 'জাতীয় জরুরি সেবা', number: '999', icon: 'ShieldAlert', desc: 'পুলিশ, অ্যাম্বুলেন্স ও ফায়ার সার্ভিস (টোল ফ্রি)' },
+  { name: 'স্বাস্থ্য বাতায়ন', number: '16263', icon: 'PhoneCall', desc: 'সরকারি স্বাস্থ্য পরামর্শ ও তথ্য সেবা' },
+  { name: 'রক্তকণিকা হটলাইন', number: '09612-889900', icon: 'HeartHandshake', desc: '২৪ ঘণ্টা জরুরি রক্ত ব্যবস্থাপনা সেল' },
+  { name: 'রেড ক্রিসেন্ট ব্লাড সেল', number: '01819-228844', icon: 'Activity', desc: 'কেন্দ্রীয় জরুরি রক্ত সরবরাহ' }
+];
 
 export function ContactPage() {
   const { addToast } = useToast();

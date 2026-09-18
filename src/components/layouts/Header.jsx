@@ -27,7 +27,8 @@ import { useAuth } from '../../contexts/AuthContext';
 import { useNotifications } from '../../contexts/NotificationContext';
 import { Modal } from '../ui/Modal';
 import { BloodCompatibilityModal } from '../common/BloodCompatibilityModal';
-import { BLOOD_GROUPS } from '../../constants';
+
+const BLOOD_GROUPS = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
 
 export function Header() {
   const location = useLocation();

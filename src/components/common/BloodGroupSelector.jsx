@@ -1,5 +1,5 @@
 import React from 'react';
-import { BLOOD_GROUPS } from '../../constants';
+export const BLOOD_GROUPS = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
 
 export function BloodGroupSelector({ value, onChange, includeAll = false, className = '' }) {
   const groups = includeAll ? ['ALL', ...BLOOD_GROUPS] : BLOOD_GROUPS;

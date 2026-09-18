@@ -1,6 +1,11 @@
 import React from 'react';
 import { Droplet } from 'lucide-react';
-import { URGENCY_LABELS } from '../../constants';
+
+export const URGENCY_LABELS = {
+  normal: { text: 'সাধারণ', color: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
+  urgent: { text: 'জরুরি', color: 'bg-amber-50 text-amber-700 border-amber-200' },
+  critical: { text: 'অত্যন্ত জরুরি', color: 'bg-rose-50 text-rose-700 border-rose-200 animate-pulse' }
+};
 
 export function BloodGroupBadge({ bloodGroup, size = 'md', className = '' }) {
   const isNegative = bloodGroup && bloodGroup.includes('-');

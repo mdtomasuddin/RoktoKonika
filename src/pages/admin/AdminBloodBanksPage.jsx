@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Building2, ShieldCheck, Database, Edit, CheckCircle2, XCircle, FileText, AlertTriangle } from 'lucide-react';
 import { MOCK_BLOOD_BANKS } from '../../mocks/bloodBanks';
-import { BLOOD_GROUPS } from '../../constants';
 import { useToast } from '../../contexts/ToastContext';
+
+const BLOOD_GROUPS = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
 
 export function AdminBloodBanksPage() {
   const { addToast } = useToast();

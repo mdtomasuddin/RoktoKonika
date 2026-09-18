@@ -27,7 +27,8 @@ import { LocationSelector } from '../../components/common/LocationSelector';
 import { BloodCompatibilityModal } from '../../components/common/BloodCompatibilityModal';
 import { bloodRequestService } from '../../services/bloodRequestService';
 import { hospitalService, bloodBankService } from '../../services/hospitalService';
-import { BLOOD_GROUPS } from '../../constants';
+
+const BLOOD_GROUPS = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
 
 export function HomePage() {
   const navigate = useNavigate();

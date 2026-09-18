@@ -1,6 +1,7 @@
 import React from 'react';
 import { BANGLADESH_DIVISIONS } from '../../mocks/locations';
-import { BLOOD_GROUPS } from '../../constants';
+
+const BLOOD_GROUPS = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-'];
 
 export function LocationSelector({
   division,

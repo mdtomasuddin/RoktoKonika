@@ -23,7 +23,6 @@ import { SafetyNoticeCard } from '../../components/common/SafetyNoticeCard';
 import { Modal } from '../../components/ui/Modal';
 import { BloodGroupBadge } from '../../components/common/BloodGroupBadge';
 import { useToast } from '../../contexts/ToastContext';
-import { BLOOD_GROUPS } from '../../constants';
 
 export function RequestBloodPage() {
   const navigate = useNavigate();

@@ -19,7 +19,6 @@ import { LocationSelector } from '../../components/common/LocationSelector';
 import { BloodGroupSelector } from '../../components/common/BloodGroupSelector';
 import { EmptyState } from '../../components/ui/EmptyState';
 import { Skeleton } from '../../components/ui/Skeleton';
-import { BLOOD_GROUPS } from '../../constants';
 
 export function BloodBanksPage() {
   const [bloodBanks, setBloodBanks] = useState([]);
