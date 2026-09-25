@@ -14,7 +14,6 @@ import {
   PlusCircle, 
   CheckCircle2, 
   PhoneCall, 
-  HelpCircle,
   Building2,
   AlertTriangle,
   ChevronRight
@@ -24,7 +23,6 @@ import { Card, CardBody } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
 import { BloodGroupBadge, UrgencyBadge } from '../../components/common/BloodGroupBadge';
 import { LocationSelector } from '../../components/common/LocationSelector';
-import { BloodCompatibilityModal } from '../../components/common/BloodCompatibilityModal';
 import { bloodRequestService } from '../../services/bloodRequestService';
 import { hospitalService, bloodBankService } from '../../services/hospitalService';
 
@@ -38,7 +36,6 @@ export function HomePage() {
   const [urgentRequests, setUrgentRequests] = useState([]);
   const [hospitals, setHospitals] = useState([]);
   const [bloodBanks, setBloodBanks] = useState([]);
-  const [compatModalOpen, setCompatModalOpen] = useState(false);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -109,14 +106,6 @@ export function HomePage() {
                     রক্তদান করতে চাই
                   </Button>
                 </Link>
-                <button
-                  type="button"
-                  onClick={() => setCompatModalOpen(true)}
-                  className="text-xs sm:text-sm font-bold text-slate-600 hover:text-rose-600 flex items-center gap-1.5 px-3 py-2"
-                >
-                  <HelpCircle className="w-4 h-4 text-slate-400" />
-                  ম্যাচিং চার্ট দেখুন
-                </button>
               </div>
 
               {/* Quick Trust Highlights */}
@@ -519,11 +508,6 @@ export function HomePage() {
           </div>
         </div>
       </section>
-
-      <BloodCompatibilityModal
-        isOpen={compatModalOpen}
-        onClose={() => setCompatModalOpen(false)}
-      />
     </div>
   );
 }
