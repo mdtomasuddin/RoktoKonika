@@ -23,7 +23,10 @@ export function Button({
     outline: 'border border-slate-300 hover:border-slate-400 bg-white text-slate-700 hover:bg-slate-50 focus:ring-slate-400',
     ghost: 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:ring-slate-300',
     danger: 'bg-red-50 hover:bg-red-100 text-red-700 border border-red-200 focus:ring-red-500',
-    success: 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm focus:ring-emerald-500'
+    success: 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm focus:ring-emerald-500',
+    white: 'bg-white hover:bg-rose-50 text-rose-700 shadow-xl focus:ring-white font-bold',
+    'white-outline': 'border border-white/60 hover:border-white bg-white/10 hover:bg-white/20 text-white focus:ring-white font-semibold backdrop-blur-xs',
+    whiteOutline: 'border border-white/60 hover:border-white bg-white/10 hover:bg-white/20 text-white focus:ring-white font-semibold backdrop-blur-xs'
   };
 
   const sizes = {

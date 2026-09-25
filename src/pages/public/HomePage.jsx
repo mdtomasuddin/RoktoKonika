@@ -496,12 +496,12 @@ export function HomePage() {
 
           <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
             <Link to="/become-a-donor" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full bg-white text-rose-700 hover:bg-rose-50 shadow-xl font-bold">
+              <Button variant="white" size="lg" className="w-full">
                 Donor হিসেবে যুক্ত হোন
               </Button>
             </Link>
             <Link to="/about" className="w-full sm:w-auto">
-              <Button size="lg" variant="ghost" className="w-full text-white hover:bg-white/10 border border-white/30">
+              <Button variant="white-outline" size="lg" className="w-full">
                 আমাদের জানুন
               </Button>
             </Link>
