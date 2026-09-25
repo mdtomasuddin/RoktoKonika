@@ -109,7 +109,7 @@ export function BloodRequestsPage() {
         </div>
 
         <Link to="/request-blood" className="flex-shrink-0">
-          <Button size="lg" className="bg-white text-rose-700 hover:bg-rose-50 font-bold shadow-lg" leftIcon={<PlusCircle className="w-5 h-5" />}>
+          <Button variant="white" size="lg" className="shadow-lg" leftIcon={<PlusCircle className="w-5 h-5" />}>
             নতুন রক্তের অনুরোধ দিন
           </Button>
         </Link>
